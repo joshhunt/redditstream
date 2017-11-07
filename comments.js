@@ -19,8 +19,7 @@ const RATE = 5 * 1000;
 
 const sub = subreddit => snooStream.commentStream(subreddit, { rate: RATE });
 
-let commentStream = sub('destinythegame');
-// let commentStream2 = sub('destiny2');
+const subscriptions = [sub('destinythegame'), sub('destiny2')];
 
 function onComment(comment, match) {
     fs.writeFileSync(
@@ -60,5 +59,4 @@ function onComment(comment, match) {
     }
 }
 
-commentStream.on('post', onComment);
-// commentStream2.on('post', onComment);
+subscriptions.forEach(sub => sub.on('post', onComment));
