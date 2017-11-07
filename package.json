@@ -1,0 +1,11 @@
+{
+  "name": "redditstream",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@slack/client": "^3.14.1",
+    "reddit-stream": "^1.2.0",
+    "snoostream": "^1.0.1"
+  }
+}
