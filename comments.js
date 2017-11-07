@@ -15,9 +15,9 @@ let snooStream = SnooStream({
     refreshToken: creds.refreshToken
 });
 
-const RATE = 2 * 1000;
+const RATE = 5 * 1000;
 
-const sub = subreddit => snooStream.commentStream(subreddit);
+const sub = subreddit => snooStream.commentStream(subreddit, { rate: RATE });
 
 let commentStream = sub('destinythegame');
 // let commentStream2 = sub('destiny2');
