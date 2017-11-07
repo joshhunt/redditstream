@@ -56,6 +56,8 @@ function onComment(comment, match) {
                 console.log('Message sent: ', res);
             }
         });
+    } else {
+        console.log('Irrelevent comment on ' + comment.subreddit.display_name);
     }
 }
 
