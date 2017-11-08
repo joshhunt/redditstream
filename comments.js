@@ -22,10 +22,10 @@ const sub = subreddit => snooStream.commentStream(subreddit, { rate: RATE });
 const subscriptions = [sub('destinythegame'), sub('destiny2')];
 
 function onComment(comment, match) {
-    fs.writeFileSync(
-        `./comments/${comment.id}.json`,
-        JSON.stringify(comment, null, 2)
-    );
+    // fs.writeFileSync(
+    //     `./comments/${comment.id}.json`,
+    //     JSON.stringify(comment, null, 2)
+    // );
 
     if (comment.body.includes('destinysets')) {
         const url = `https://www.reddit.com${comment.permalink}?context=3`;
