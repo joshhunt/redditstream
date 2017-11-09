@@ -57,7 +57,9 @@ function onComment(comment, match) {
             }
         });
     } else {
-        console.log('Irrelevent comment on ' + comment.subreddit.display_name);
+        console.log(
+            'Irrelevent comment on /r/' + comment.subreddit.display_name
+        );
     }
 }
 
